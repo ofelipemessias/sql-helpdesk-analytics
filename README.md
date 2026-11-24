@@ -124,3 +124,14 @@ psql -d helpdesk -f schema.sql -f seed.sql -f queries.sql
 ```
 
 As consultas usam sintaxe de data do SQLite; o próprio `queries.sql` indica o equivalente em PostgreSQL.
+
+---
+
+## 🧪 Testes | Tests | Pruebas
+
+```bash
+pip install pytest
+pytest -q
+```
+
+Roda `schema.sql`, `seed.sql` e as 12 consultas em SQLite (biblioteca padrão do Python) e confere o volume dos dados e o número de linhas de cada consulta. Só o dialeto SQLite é testado; o equivalente PostgreSQL indicado em `queries.sql` não é. · Runs the schema, seed and all 12 queries on SQLite and checks data volume and row counts. Only the SQLite dialect is tested, not the PostgreSQL equivalents. · Ejecuta el esquema, los datos y las 12 consultas en SQLite; solo se prueba el dialecto SQLite.
